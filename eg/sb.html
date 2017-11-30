@@ -10,20 +10,37 @@
 	</head>
 	<body>
 		<button class="start">Start</button>
+			<br />
+			<button class="finish">finish</button>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+
+</ul>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+
+</ul>
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 			<script type="text/javascript">
 			oli=$("li");
 			var timer=null;
-			$("button.start").click(function(){
-				clearInterval(timer);
 				timer=setInterval(function(){
 				for (let i=0;i<oli.length;i++){
-					
+					oli[i].style.background=getClorer();
 $("body").css("background",getClorer());
 				}
 				},50)
-			})
 			$("button.finish").click(function(){
-				clearInterval(timer)
+				clearInterval(timer);
 			})
 		function getClorer(){
 			let r=Math.floor(Math.random()*256);
@@ -31,6 +48,7 @@ $("body").css("background",getClorer());
 			let b=Math.floor(Math.random()*256);
 			return "rgb("+r+','+g+','+b+")";
 		}
+		
 			
 			
 		</script>	
